@@ -1,0 +1,51 @@
+<PostCard>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: dp(420)
+    spacing: 2
+    elevation: 0
+
+
+    MDBoxLayout:
+        padding: 2
+        adaptive_height: True
+
+        OneLineAvatarListItem:
+            text: f'[b][size=14]{root.username}[/size][/b]'
+            divider: None
+            _no_ripple_effect: True
+
+            ImageLeftWidget:
+                source: root.avatar
+                radius: [20, ]
+        
+        MDIconButton:
+            icon: 'dots-vertical'
+    
+    # Posts
+    FitImage:
+        adaptive_height: True
+        source: root.post
+    
+    #Reactions 
+    MDBoxLayout:
+        padding: 5, 0, 0, 0
+        spacing: 2
+        adaptive_height: True
+
+        MDIconButton:
+            icon: 'heart-outline'
+        
+        MDIconButton:
+            icon: 'message-outline'
+        
+        MDIconButton:
+            icon: 'send-outline'
+        
+        Widget:
+
+        MDIconButton:
+            icon: 'bookmark-outline'
+
+
+
